@@ -20,6 +20,7 @@ class MusicLibraryController
     puts "What would you like to do?"
     
     input = gets.strip
+<<<<<<< HEAD
     
     case input 
      
@@ -36,6 +37,8 @@ class MusicLibraryController
     when "play song"
       play_song
     end
+=======
+>>>>>>> 911aea397413542573dbec4b75304b02e1a76652
   end
   
   def list_songs
@@ -43,6 +46,10 @@ class MusicLibraryController
     sorted_songs.each.with_index(1) do |song, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
+<<<<<<< HEAD
+=======
+    return sorted_songs
+>>>>>>> 911aea397413542573dbec4b75304b02e1a76652
   end
   
   def list_artists
@@ -81,6 +88,7 @@ class MusicLibraryController
   
   def play_song
     puts "Which song number would you like to play?"
+<<<<<<< HEAD
     input = gets.strip.to_i - 1
 
     if input > 0 && input <= Song.all.length - 1
@@ -90,6 +98,16 @@ class MusicLibraryController
       puts "Playing #{song.name} by #{song.artist.name}"
     end
       
+=======
+    input = gets.strip
+    binding.pry
+    input_int = input.to_i
+    if input_int 
+    list_songs[input_int]
+    
+    
+    
+>>>>>>> 911aea397413542573dbec4b75304b02e1a76652
 
   end
 end
